@@ -18,9 +18,9 @@ xmtr    res     1               ; send queue read index
 xmtw    res     1               ; send queue write index
 rcvr    res     1               ; recv queue read index
 rcvw    res     1               ; recv queue write index
-fsrbk   res     2               ; fsr backup
 
 .usartd1 udata
+fsrbk   res     2               ; fsr backup
 xmtbuf  res     BUFSIZE         ; write buffer
 rcvbuf  res     BUFSIZE         ; read buffer
 digits  res     5               ; digits for BCD conversion
