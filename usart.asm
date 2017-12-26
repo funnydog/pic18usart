@@ -103,7 +103,11 @@ usart_isr_tx_end:
         movff   fsrbk+1, FSR0H
         return
 
+        ;; usart_init
+        ;;
         ;; initialize the usart module
+        ;;
+        ;; Return: none
 usart_init:
         ;; initialize the control variables
         clrf    xmtr, A         ; clear the send queue read index
