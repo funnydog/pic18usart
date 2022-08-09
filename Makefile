@@ -22,9 +22,6 @@ usart.o: config.inc usart.inc
 clean:
 	@rm -f *.o *.hex *.cod *.map *.lst *.cof *~
 
-client: client.o
-	$(CC) -o $@ $^ -lusb-1.0
-
 erase:
 	pk2cmd -R -P -E
 
