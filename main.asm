@@ -89,6 +89,12 @@ main:
 main_loop:
         call    usart_recv_nowait
         bc      $-4
+        sublw   '\r'
+        bnz     main_send
+        call    usart_send_nl
+        bra     main_loop
+main_send:
+        sublw   '\r'
         call    usart_send_nowait
         bc      $-4
         bra     main_loop
